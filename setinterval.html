@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Setinterval</title>
+   
+<body>
+    <div class="wrapper">
+        <input type="text" name="" id="">
+        <button>Add to Array</button>
+        <button>Print Array</button>
+    </div>
+    <script>
+        let inp = document.querySelector('input');
+        let btn1 = document.querySelector('button:first-of-type');
+        let btn2 = document.querySelector('button:last-of-type');
+        let arry = [];
+        let clear;
+        // btn1.onclick = ()=>{
+        //     clear = setInterval(() => {
+        //         let para = document.createElement('p');
+        // document.querySelector('.wrapper').appendChild(para);
+        //         arry.push(inp.value);
+        //         para.innerHTML  = arry;
+                 
+        //     }, 1000);
+        
+        // btn2.onclick = ()=>{
+        //     clearInterval(clear);
+        // }
+        let i = 0;
+        btn1.onclick = ()=>{
+            arry.push(inp.value);
+            console.log(arry);
+        }
+        btn2.onclick = ()=>{
+            clear = setInterval(() => {
+                let para = document.createElement('p');
+        document.querySelector('.wrapper').appendChild(para);
+                if(i==arry.length){
+       
+        para.innerHTML += arry[i];   
+        i++;  
+        clearInterval(clear)
+    }
+    else{
+        para.innerHTML += arry[i] + ", ";   
+        i++;  
+    }
+        
+            }, 1000);
+            
+        
+        }
+        
+
+
+    </script>
+    
+</body>
+</html>
