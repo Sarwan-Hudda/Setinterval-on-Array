@@ -40,9 +40,9 @@
             clear = setInterval(() => {
                 let para = document.createElement('p');
         document.querySelector('.wrapper').appendChild(para);
-                if(i==arry.length){
+                if(i==arry.length-1){
        
-        para.innerHTML += arry[i];   
+        para.innerHTML = arry[i];   
         i++;  
         clearInterval(clear)
     }
